@@ -17,6 +17,12 @@ var aPoint = {
 
 // So if you declare a helper function inside of a method — which seems like a reasonable thing to do! — 
 // it won’t work as you would expect:
+
+/* 
+The above code is calling the m1 method on an object.
+The m1 method calls the m2 method on the same object.
+The m1 method also calls a helper function. The helper function calls the m2 method on the same object. 
+*/
 ({
     m1: function() {
       // here, `this` is the receiver

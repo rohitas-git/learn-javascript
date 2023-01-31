@@ -4,7 +4,7 @@ function add(x, y) {
 }
 // * Functions are first-class values. 
 //
-// This means you can store a function in a variable, property, or an array. 
+// * This means you can store a function in a variable, property, or an array. 
 // You can also return a function from another function or a method.
 // 
 // Note that you don’t have to declare a function in order to get your hands on a function value.
