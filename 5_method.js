@@ -1,3 +1,5 @@
+// LINK: https://www.cs.cmu.edu/~aldrich/courses/17-396/js/
+
 // * A method is just a function that’s stored in a property.
 
 var aPoint = {
@@ -34,10 +36,31 @@ The m1 method also calls a helper function. The helper function calls the m2 met
       }
       helper();
     },
-    m2: function() { … }
+    m2: function() { return 0 }
   }).m1();
 
 //   This is a subtle bug, and JavaScript programmers get bit by it all the time. 
 // The usual work-around, once you realize that this is the problem, 
-// is to declare a local variable called self through which the helper function can access the receiver
 
+// * is to declare a local variable called self through which the helper function can access the receiver
+({
+  m1: function() {
+    var self = this;
+    function helper() {
+      // here, `this` is still `undefined`
+      // but we have access to the receiver through `self`
+      self.m2();  // works!
+    }
+    helper();
+  },
+  m2: function() { return 0 }
+}).m1();
+
+// * This works because a fat arrow function captures not only the local variables, but also this from its enclosing lexical scope.
+({
+  m1: function() {
+    var helper = () => this.m2();  // works!
+    helper();
+  },
+  m2: function() { return 0 }
+}).m1();

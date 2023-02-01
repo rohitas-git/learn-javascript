@@ -19,7 +19,7 @@ function add(x, y) {
 // * fat arrow function
 //
 // 
-    [1, 2, 3].map(x => x + 1)
+    //! [1, 2, 3].map(x => x + 1)
 //
 
 
@@ -28,13 +28,14 @@ function add(x, y) {
 // 
 function makeCounter() {
   var count = 0;
-  return function() { return count++; };
+  return function() {console.log(count); return count++; };
 }
 
 var counter = makeCounter();
 counter();  //0
 counter();  //1
 counter();  //2
+
 
 //
 // In JavaScript, you can call a function with any number of arguments, no matter how many formal parameters that function has in its declaration.
@@ -49,6 +50,7 @@ function sum(/* a, b, c, … */) {
     for (var idx = 0; idx < arguments.length; idx++) {
       ans += arguments[idx];
     }
+    console.log("Ans:", ans);
     return ans;
   }
   
