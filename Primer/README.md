@@ -4,3 +4,5 @@ Who in their right mind would prototype a programming language in JavaScript?!? 
 
 
 JavaScript is a prototype-based language
+
+https://www.cs.cmu.edu/~aldrich/courses/17-396/js/

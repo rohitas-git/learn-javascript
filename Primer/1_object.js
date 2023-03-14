@@ -27,7 +27,9 @@ var propName = 'num' + 'Buttons';
 // * Property names are always strings. 
 // IF Non-string property - Access or Assignment of an object
 // * the non-string value will be implicitly converted to a string via its toString() method.
+
 var someObject = { foo: 42, bar: 'hello world' };
+
 // someObject’s toString() returns '[object Object]'. Yup, the default toString() is pretty useless.
 // Since daddysShirt does not have a property with that name, 
 // daddysShirt[someObject] will evaluate to the special value undefined.
