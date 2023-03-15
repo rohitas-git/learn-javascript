@@ -49,7 +49,7 @@ x+=5;
 console.log(x);
 
 /* --------------------------------- Type of -------------------------------- */
-import {newline} from "./module.js";
+import {println,newline, print} from "./module.js";
 newline();
 
 var empty;
@@ -64,7 +64,5 @@ console.log(typeof empty);
 console.log("null: "+ typeof null);
 console.log(typeof  12.132);
 // console.log(typeof  );
-
-
 
 

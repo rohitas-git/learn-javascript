@@ -1,5 +1,6 @@
-import {print} from './module.js'
+import {println,print} from './module.js'
+const a=1;
 
-let a=12;
+// print.call(a,1231,12);
 
-print(a);
+println(12,123);
